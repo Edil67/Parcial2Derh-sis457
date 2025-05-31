@@ -15,10 +15,10 @@ namespace CadParcial2Derh
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class Parcial2DerhEntities : DbContext
+    public partial class Parcial2DerhEntities1 : DbContext
     {
-        public Parcial2DerhEntities()
-            : base("name=Parcial2DerhEntities")
+        public Parcial2DerhEntities1()
+            : base("name=Parcial2DerhEntities1")
         {
         }
     

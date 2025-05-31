@@ -15,6 +15,8 @@
           <Property Name="director" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="episodios" Type="int" Nullable="false" />
           <Property Name="fechaEstreno" Type="date" />
+          <Property Name="urlPortada" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="idiomaOriginal" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="estado" Type="smallint" Nullable="false" />
           <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
@@ -40,11 +42,13 @@
           <Property Name="director" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="episodios" Type="Int32" Nullable="false" />
           <Property Name="fechaEstreno" Type="DateTime" Precision="0" />
+          <Property Name="urlPortada" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idiomaOriginal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="estado" Type="Int16" Nullable="false" />
           <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
-        <EntityContainer Name="Parcial2DerhEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Parcial2DerhEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Serie" EntityType="Self.Serie" />
           <FunctionImport Name="paSerieListar" ReturnType="Collection(Parcial2DerhModel.paSerieListar_Result)">
             <Parameter Name="parametro" Mode="In" Type="String" />
@@ -57,6 +61,8 @@
           <Property Type="String" Name="director" Nullable="false" MaxLength="100" />
           <Property Type="Int32" Name="episodios" Nullable="false" />
           <Property Type="DateTime" Name="fechaEstreno" Nullable="true" />
+          <Property Type="String" Name="urlPortada" Nullable="false" MaxLength="500" />
+          <Property Type="String" Name="idiomaOriginal" Nullable="false" MaxLength="50" />
           <Property Type="Int16" Name="estado" Nullable="false" />
           <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
           <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
@@ -66,7 +72,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Parcial2DerhModelStoreContainer" CdmEntityContainer="Parcial2DerhEntities">
+        <EntityContainerMapping StorageEntityContainer="Parcial2DerhModelStoreContainer" CdmEntityContainer="Parcial2DerhEntities1">
           <EntitySetMapping Name="Serie">
             <EntityTypeMapping TypeName="Parcial2DerhModel.Serie">
               <MappingFragment StoreEntitySet="Serie">
@@ -76,6 +82,8 @@
                 <ScalarProperty Name="director" ColumnName="director" />
                 <ScalarProperty Name="episodios" ColumnName="episodios" />
                 <ScalarProperty Name="fechaEstreno" ColumnName="fechaEstreno" />
+                <ScalarProperty Name="urlPortada" ColumnName="urlPortada" />
+                <ScalarProperty Name="idiomaOriginal" ColumnName="idiomaOriginal" />
                 <ScalarProperty Name="estado" ColumnName="estado" />
                 <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
                 <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
@@ -91,6 +99,8 @@
                 <ScalarProperty Name="director" ColumnName="director" />
                 <ScalarProperty Name="episodios" ColumnName="episodios" />
                 <ScalarProperty Name="fechaEstreno" ColumnName="fechaEstreno" />
+                <ScalarProperty Name="urlPortada" ColumnName="urlPortada" />
+                <ScalarProperty Name="idiomaOriginal" ColumnName="idiomaOriginal" />
                 <ScalarProperty Name="estado" ColumnName="estado" />
                 <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
                 <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />

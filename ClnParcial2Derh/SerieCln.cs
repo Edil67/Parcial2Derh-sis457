@@ -11,7 +11,7 @@ namespace ClnParcialDerh
     {
         public static int insertar(Serie serie)
         {
-            using (var context = new Parcial2DerhEntities())
+            using (var context = new Parcial2DerhEntities1())
             {
                 context.Serie.Add(serie);
                 context.SaveChanges();
@@ -21,7 +21,7 @@ namespace ClnParcialDerh
 
         public static int actualizar(Serie serie)
         {
-            using (var context = new Parcial2DerhEntities())
+            using (var context = new Parcial2DerhEntities1())
             {
                 var existente = context.Serie.Find(serie.id);
                 existente.titulo = serie.titulo;
@@ -29,6 +29,8 @@ namespace ClnParcialDerh
                 existente.director = serie.director;
                 existente.episodios = serie.episodios;
                 existente.fechaEstreno = serie.fechaEstreno;
+                existente.urlPortada = serie.urlPortada;
+                existente.idiomaOriginal = serie.idiomaOriginal;
                 existente.usuarioRegistro = serie.usuarioRegistro;
 
                 return context.SaveChanges();
@@ -37,7 +39,7 @@ namespace ClnParcialDerh
 
         public static int eliminar(int id, string usuario)
         {
-            using (var context = new Parcial2DerhEntities())
+            using (var context = new Parcial2DerhEntities1())
             {
                 var serie = context.Serie.Find(id);
                 serie.estado = -1;
@@ -48,7 +50,7 @@ namespace ClnParcialDerh
 
         public static Serie obtenerUno(int id)
         {
-            using (var context = new Parcial2DerhEntities())
+            using (var context = new Parcial2DerhEntities1())
             {
                 return context.Serie.Find(id);
             }
@@ -56,7 +58,7 @@ namespace ClnParcialDerh
 
         public static List<Serie> listar()
         {
-            using (var context = new Parcial2DerhEntities())
+            using (var context = new Parcial2DerhEntities1())
             {
                 return context.Serie.Where(x => x.estado != -1).ToList();
             }
@@ -64,7 +66,7 @@ namespace ClnParcialDerh
 
         public static List<paSerieListar_Result> listarPa(string parametro)
         {
-            using (var context = new Parcial2DerhEntities())
+            using (var context = new Parcial2DerhEntities1())
             {
                 return context.paSerieListar(parametro).ToList();
             }

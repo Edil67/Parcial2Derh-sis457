@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Parcial2DerhModelStoreContainer" CdmEntityContainer="Parcial2DerhEntities">
+  <EntityContainerMapping StorageEntityContainer="Parcial2DerhModelStoreContainer" CdmEntityContainer="Parcial2DerhEntities1">
     <EntitySetMapping Name="Serie">
       <EntityTypeMapping TypeName="Parcial2DerhModel.Serie">
         <MappingFragment StoreEntitySet="Serie">
@@ -10,6 +10,8 @@
           <ScalarProperty Name="director" ColumnName="director" />
           <ScalarProperty Name="episodios" ColumnName="episodios" />
           <ScalarProperty Name="fechaEstreno" ColumnName="fechaEstreno" />
+          <ScalarProperty Name="urlPortada" ColumnName="urlPortada" />
+          <ScalarProperty Name="idiomaOriginal" ColumnName="idiomaOriginal" />
           <ScalarProperty Name="estado" ColumnName="estado" />
           <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
           <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
@@ -25,6 +27,8 @@
           <ScalarProperty Name="director" ColumnName="director" />
           <ScalarProperty Name="episodios" ColumnName="episodios" />
           <ScalarProperty Name="fechaEstreno" ColumnName="fechaEstreno" />
+          <ScalarProperty Name="urlPortada" ColumnName="urlPortada" />
+          <ScalarProperty Name="idiomaOriginal" ColumnName="idiomaOriginal" />
           <ScalarProperty Name="estado" ColumnName="estado" />
           <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
           <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />

@@ -20,6 +20,8 @@ namespace CadParcial2Derh
         public string director { get; set; }
         public int episodios { get; set; }
         public Nullable<System.DateTime> fechaEstreno { get; set; }
+        public string urlPortada { get; set; }
+        public string idiomaOriginal { get; set; }
         public short estado { get; set; }
         public string usuarioRegistro { get; set; }
         public System.DateTime fechaRegistro { get; set; }

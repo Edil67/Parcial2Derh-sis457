@@ -36,6 +36,10 @@
             this.lblParametro = new System.Windows.Forms.Label();
             this.lblTituloListaSeries = new System.Windows.Forms.Label();
             this.pnlAcciones = new System.Windows.Forms.Panel();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.lblFechaEstreno = new System.Windows.Forms.Label();
             this.erpCargo = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblEpisodios = new System.Windows.Forms.Label();
@@ -49,6 +53,8 @@
             this.erpDirector = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpEpisodio = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpFechaEstreno = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpUrlPortada = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpIdiomaOriginal = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtDirector = new System.Windows.Forms.TextBox();
             this.lblDirector = new System.Windows.Forms.Label();
             this.txtSinopsis = new System.Windows.Forms.TextBox();
@@ -56,16 +62,16 @@
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.gbxDatosSerie = new System.Windows.Forms.GroupBox();
+            this.cbxIdiomaOriginal = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtUrlPortada = new System.Windows.Forms.TextBox();
+            this.lblUrlPortada = new System.Windows.Forms.Label();
             this.nudEpisodio = new System.Windows.Forms.NumericUpDown();
             this.dtpFechaEstreno = new System.Windows.Forms.DateTimePicker();
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.gbxListaSerie.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaSerie)).BeginInit();
             this.pnlAcciones.SuspendLayout();
@@ -80,6 +86,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.erpDirector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpEpisodio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpFechaEstreno)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpUrlPortada)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpIdiomaOriginal)).BeginInit();
             this.gbxDatosSerie.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEpisodio)).BeginInit();
             this.SuspendLayout();
@@ -145,184 +153,6 @@
             this.pnlAcciones.Size = new System.Drawing.Size(795, 47);
             this.pnlAcciones.TabIndex = 19;
             // 
-            // lblFechaEstreno
-            // 
-            this.lblFechaEstreno.AutoSize = true;
-            this.lblFechaEstreno.Location = new System.Drawing.Point(410, 41);
-            this.lblFechaEstreno.Name = "lblFechaEstreno";
-            this.lblFechaEstreno.Size = new System.Drawing.Size(116, 16);
-            this.lblFechaEstreno.TabIndex = 15;
-            this.lblFechaEstreno.Text = "Fecha de Estreno:";
-            // 
-            // erpCargo
-            // 
-            this.erpCargo.ContainerControl = this;
-            // 
-            // lblEpisodios
-            // 
-            this.lblEpisodios.AutoSize = true;
-            this.lblEpisodios.Location = new System.Drawing.Point(411, 14);
-            this.lblEpisodios.Name = "lblEpisodios";
-            this.lblEpisodios.Size = new System.Drawing.Size(71, 16);
-            this.lblEpisodios.TabIndex = 14;
-            this.lblEpisodios.Text = "Episodios:";
-            // 
-            // erpCedulaIdentidad
-            // 
-            this.erpCedulaIdentidad.ContainerControl = this;
-            // 
-            // erpNombres
-            // 
-            this.erpNombres.ContainerControl = this;
-            // 
-            // erpApellidos
-            // 
-            this.erpApellidos.ContainerControl = this;
-            // 
-            // erpDireccion
-            // 
-            this.erpDireccion.ContainerControl = this;
-            // 
-            // erpCelular
-            // 
-            this.erpCelular.ContainerControl = this;
-            // 
-            // erpTitulo
-            // 
-            this.erpTitulo.ContainerControl = this;
-            // 
-            // erpSinopsis
-            // 
-            this.erpSinopsis.ContainerControl = this;
-            // 
-            // erpDirector
-            // 
-            this.erpDirector.ContainerControl = this;
-            // 
-            // erpEpisodio
-            // 
-            this.erpEpisodio.ContainerControl = this;
-            // 
-            // erpFechaEstreno
-            // 
-            this.erpFechaEstreno.ContainerControl = this;
-            // 
-            // txtDirector
-            // 
-            this.txtDirector.Location = new System.Drawing.Point(143, 85);
-            this.txtDirector.MaxLength = 100;
-            this.txtDirector.Multiline = true;
-            this.txtDirector.Name = "txtDirector";
-            this.txtDirector.Size = new System.Drawing.Size(248, 22);
-            this.txtDirector.TabIndex = 3;
-            // 
-            // lblDirector
-            // 
-            this.lblDirector.AutoSize = true;
-            this.lblDirector.Location = new System.Drawing.Point(75, 88);
-            this.lblDirector.Name = "lblDirector";
-            this.lblDirector.Size = new System.Drawing.Size(57, 16);
-            this.lblDirector.TabIndex = 4;
-            this.lblDirector.Text = "Director:";
-            // 
-            // txtSinopsis
-            // 
-            this.txtSinopsis.Location = new System.Drawing.Point(143, 51);
-            this.txtSinopsis.MaxLength = 5000;
-            this.txtSinopsis.Multiline = true;
-            this.txtSinopsis.Name = "txtSinopsis";
-            this.txtSinopsis.Size = new System.Drawing.Size(248, 22);
-            this.txtSinopsis.TabIndex = 2;
-            // 
-            // lblSinopsis
-            // 
-            this.lblSinopsis.AutoSize = true;
-            this.lblSinopsis.Location = new System.Drawing.Point(75, 54);
-            this.lblSinopsis.Name = "lblSinopsis";
-            this.lblSinopsis.Size = new System.Drawing.Size(62, 16);
-            this.lblSinopsis.TabIndex = 2;
-            this.lblSinopsis.Text = "Sinopsis:";
-            // 
-            // txtTitulo
-            // 
-            this.txtTitulo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTitulo.Location = new System.Drawing.Point(143, 13);
-            this.txtTitulo.MaxLength = 250;
-            this.txtTitulo.Multiline = true;
-            this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.Size = new System.Drawing.Size(248, 22);
-            this.txtTitulo.TabIndex = 1;
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Location = new System.Drawing.Point(89, 18);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(43, 16);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Título:";
-            // 
-            // gbxDatosSerie
-            // 
-            this.gbxDatosSerie.Controls.Add(this.nudEpisodio);
-            this.gbxDatosSerie.Controls.Add(this.dtpFechaEstreno);
-            this.gbxDatosSerie.Controls.Add(this.lblFechaEstreno);
-            this.gbxDatosSerie.Controls.Add(this.lblEpisodios);
-            this.gbxDatosSerie.Controls.Add(this.txtDirector);
-            this.gbxDatosSerie.Controls.Add(this.btnCancelar);
-            this.gbxDatosSerie.Controls.Add(this.btnGuardar);
-            this.gbxDatosSerie.Controls.Add(this.lblDirector);
-            this.gbxDatosSerie.Controls.Add(this.txtSinopsis);
-            this.gbxDatosSerie.Controls.Add(this.lblSinopsis);
-            this.gbxDatosSerie.Controls.Add(this.txtTitulo);
-            this.gbxDatosSerie.Controls.Add(this.lblTitulo);
-            this.gbxDatosSerie.Location = new System.Drawing.Point(14, 323);
-            this.gbxDatosSerie.Name = "gbxDatosSerie";
-            this.gbxDatosSerie.Size = new System.Drawing.Size(795, 115);
-            this.gbxDatosSerie.TabIndex = 20;
-            this.gbxDatosSerie.TabStop = false;
-            this.gbxDatosSerie.Text = "Datos Serie";
-            // 
-            // nudEpisodio
-            // 
-            this.nudEpisodio.Location = new System.Drawing.Point(532, 14);
-            this.nudEpisodio.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudEpisodio.Name = "nudEpisodio";
-            this.nudEpisodio.Size = new System.Drawing.Size(244, 22);
-            this.nudEpisodio.TabIndex = 17;
-            this.nudEpisodio.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // dtpFechaEstreno
-            // 
-            this.dtpFechaEstreno.Location = new System.Drawing.Point(532, 42);
-            this.dtpFechaEstreno.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.dtpFechaEstreno.Name = "dtpFechaEstreno";
-            this.dtpFechaEstreno.Size = new System.Drawing.Size(247, 22);
-            this.dtpFechaEstreno.TabIndex = 16;
-            this.dtpFechaEstreno.Value = new System.DateTime(2025, 5, 31, 0, 0, 0, 0);
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Image = global::CpParcial2Derh.Properties.Resources.limpiar2;
-            this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiar.Location = new System.Drawing.Point(601, 52);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.btnLimpiar.Size = new System.Drawing.Size(104, 40);
-            this.btnLimpiar.TabIndex = 21;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
-            // 
             // btnCerrar
             // 
             this.btnCerrar.Image = global::CpParcial2Derh.Properties.Resources.close;
@@ -379,6 +209,267 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // lblFechaEstreno
+            // 
+            this.lblFechaEstreno.AutoSize = true;
+            this.lblFechaEstreno.Location = new System.Drawing.Point(360, 97);
+            this.lblFechaEstreno.Name = "lblFechaEstreno";
+            this.lblFechaEstreno.Size = new System.Drawing.Size(116, 16);
+            this.lblFechaEstreno.TabIndex = 15;
+            this.lblFechaEstreno.Text = "Fecha de Estreno:";
+            // 
+            // erpCargo
+            // 
+            this.erpCargo.ContainerControl = this;
+            // 
+            // lblEpisodios
+            // 
+            this.lblEpisodios.AutoSize = true;
+            this.lblEpisodios.Location = new System.Drawing.Point(6, 97);
+            this.lblEpisodios.Name = "lblEpisodios";
+            this.lblEpisodios.Size = new System.Drawing.Size(71, 16);
+            this.lblEpisodios.TabIndex = 14;
+            this.lblEpisodios.Text = "Episodios:";
+            // 
+            // erpCedulaIdentidad
+            // 
+            this.erpCedulaIdentidad.ContainerControl = this;
+            // 
+            // erpNombres
+            // 
+            this.erpNombres.ContainerControl = this;
+            // 
+            // erpApellidos
+            // 
+            this.erpApellidos.ContainerControl = this;
+            // 
+            // erpDireccion
+            // 
+            this.erpDireccion.ContainerControl = this;
+            // 
+            // erpCelular
+            // 
+            this.erpCelular.ContainerControl = this;
+            // 
+            // erpTitulo
+            // 
+            this.erpTitulo.ContainerControl = this;
+            // 
+            // erpSinopsis
+            // 
+            this.erpSinopsis.ContainerControl = this;
+            // 
+            // erpDirector
+            // 
+            this.erpDirector.ContainerControl = this;
+            // 
+            // erpEpisodio
+            // 
+            this.erpEpisodio.ContainerControl = this;
+            // 
+            // erpFechaEstreno
+            // 
+            this.erpFechaEstreno.ContainerControl = this;
+            // 
+            // erpUrlPortada
+            // 
+            this.erpUrlPortada.ContainerControl = this;
+            // 
+            // erpIdiomaOriginal
+            // 
+            this.erpIdiomaOriginal.ContainerControl = this;
+            // 
+            // txtDirector
+            // 
+            this.txtDirector.Location = new System.Drawing.Point(93, 67);
+            this.txtDirector.MaxLength = 100;
+            this.txtDirector.Multiline = true;
+            this.txtDirector.Name = "txtDirector";
+            this.txtDirector.Size = new System.Drawing.Size(248, 22);
+            this.txtDirector.TabIndex = 3;
+            // 
+            // lblDirector
+            // 
+            this.lblDirector.AutoSize = true;
+            this.lblDirector.Location = new System.Drawing.Point(20, 70);
+            this.lblDirector.Name = "lblDirector";
+            this.lblDirector.Size = new System.Drawing.Size(57, 16);
+            this.lblDirector.TabIndex = 4;
+            this.lblDirector.Text = "Director:";
+            // 
+            // txtSinopsis
+            // 
+            this.txtSinopsis.Location = new System.Drawing.Point(93, 39);
+            this.txtSinopsis.MaxLength = 5000;
+            this.txtSinopsis.Multiline = true;
+            this.txtSinopsis.Name = "txtSinopsis";
+            this.txtSinopsis.Size = new System.Drawing.Size(248, 22);
+            this.txtSinopsis.TabIndex = 2;
+            // 
+            // lblSinopsis
+            // 
+            this.lblSinopsis.AutoSize = true;
+            this.lblSinopsis.Location = new System.Drawing.Point(20, 42);
+            this.lblSinopsis.Name = "lblSinopsis";
+            this.lblSinopsis.Size = new System.Drawing.Size(62, 16);
+            this.lblSinopsis.TabIndex = 2;
+            this.lblSinopsis.Text = "Sinopsis:";
+            // 
+            // txtTitulo
+            // 
+            this.txtTitulo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtTitulo.Location = new System.Drawing.Point(93, 13);
+            this.txtTitulo.MaxLength = 250;
+            this.txtTitulo.Multiline = true;
+            this.txtTitulo.Name = "txtTitulo";
+            this.txtTitulo.Size = new System.Drawing.Size(248, 22);
+            this.txtTitulo.TabIndex = 1;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Location = new System.Drawing.Point(39, 18);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(43, 16);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "Título:";
+            // 
+            // gbxDatosSerie
+            // 
+            this.gbxDatosSerie.Controls.Add(this.cbxIdiomaOriginal);
+            this.gbxDatosSerie.Controls.Add(this.label2);
+            this.gbxDatosSerie.Controls.Add(this.txtUrlPortada);
+            this.gbxDatosSerie.Controls.Add(this.lblUrlPortada);
+            this.gbxDatosSerie.Controls.Add(this.nudEpisodio);
+            this.gbxDatosSerie.Controls.Add(this.dtpFechaEstreno);
+            this.gbxDatosSerie.Controls.Add(this.lblFechaEstreno);
+            this.gbxDatosSerie.Controls.Add(this.lblEpisodios);
+            this.gbxDatosSerie.Controls.Add(this.txtDirector);
+            this.gbxDatosSerie.Controls.Add(this.btnCancelar);
+            this.gbxDatosSerie.Controls.Add(this.btnGuardar);
+            this.gbxDatosSerie.Controls.Add(this.lblDirector);
+            this.gbxDatosSerie.Controls.Add(this.txtSinopsis);
+            this.gbxDatosSerie.Controls.Add(this.lblSinopsis);
+            this.gbxDatosSerie.Controls.Add(this.txtTitulo);
+            this.gbxDatosSerie.Controls.Add(this.lblTitulo);
+            this.gbxDatosSerie.Location = new System.Drawing.Point(14, 323);
+            this.gbxDatosSerie.Name = "gbxDatosSerie";
+            this.gbxDatosSerie.Size = new System.Drawing.Size(795, 125);
+            this.gbxDatosSerie.TabIndex = 20;
+            this.gbxDatosSerie.TabStop = false;
+            this.gbxDatosSerie.Text = "Datos Serie";
+            // 
+            // cbxIdiomaOriginal
+            // 
+            this.cbxIdiomaOriginal.FormattingEnabled = true;
+            this.cbxIdiomaOriginal.Items.AddRange(new object[] {
+            "Español",
+            "Chino ",
+            "Portugues",
+            "Frances",
+            "Aleman",
+            "Ingles"});
+            this.cbxIdiomaOriginal.Location = new System.Drawing.Point(464, 58);
+            this.cbxIdiomaOriginal.MaxLength = 50;
+            this.cbxIdiomaOriginal.Name = "cbxIdiomaOriginal";
+            this.cbxIdiomaOriginal.Size = new System.Drawing.Size(209, 24);
+            this.cbxIdiomaOriginal.TabIndex = 21;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(360, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 16);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Idioma Original:";
+            // 
+            // txtUrlPortada
+            // 
+            this.txtUrlPortada.Location = new System.Drawing.Point(441, 14);
+            this.txtUrlPortada.MaxLength = 500;
+            this.txtUrlPortada.Multiline = true;
+            this.txtUrlPortada.Name = "txtUrlPortada";
+            this.txtUrlPortada.Size = new System.Drawing.Size(232, 38);
+            this.txtUrlPortada.TabIndex = 19;
+            // 
+            // lblUrlPortada
+            // 
+            this.lblUrlPortada.AutoSize = true;
+            this.lblUrlPortada.Location = new System.Drawing.Point(360, 16);
+            this.lblUrlPortada.Name = "lblUrlPortada";
+            this.lblUrlPortada.Size = new System.Drawing.Size(78, 16);
+            this.lblUrlPortada.TabIndex = 18;
+            this.lblUrlPortada.Text = "Url Portada:";
+            // 
+            // nudEpisodio
+            // 
+            this.nudEpisodio.Location = new System.Drawing.Point(93, 97);
+            this.nudEpisodio.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudEpisodio.Name = "nudEpisodio";
+            this.nudEpisodio.Size = new System.Drawing.Size(248, 22);
+            this.nudEpisodio.TabIndex = 17;
+            this.nudEpisodio.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // dtpFechaEstreno
+            // 
+            this.dtpFechaEstreno.Location = new System.Drawing.Point(472, 97);
+            this.dtpFechaEstreno.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dtpFechaEstreno.Name = "dtpFechaEstreno";
+            this.dtpFechaEstreno.Size = new System.Drawing.Size(243, 22);
+            this.dtpFechaEstreno.TabIndex = 16;
+            this.dtpFechaEstreno.Value = new System.DateTime(2025, 5, 31, 0, 0, 0, 0);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Image = global::CpParcial2Derh.Properties.Resources.cancel;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(678, 58);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnCancelar.Size = new System.Drawing.Size(111, 40);
+            this.btnCancelar.TabIndex = 11;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Image = global::CpParcial2Derh.Properties.Resources.save;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(684, 12);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnGuardar.Size = new System.Drawing.Size(105, 40);
+            this.btnGuardar.TabIndex = 10;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Image = global::CpParcial2Derh.Properties.Resources.limpiar2;
+            this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimpiar.Location = new System.Drawing.Point(601, 52);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnLimpiar.Size = new System.Drawing.Size(104, 40);
+            this.btnLimpiar.TabIndex = 21;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // btnBuscar
             // 
             this.btnBuscar.Image = global::CpParcial2Derh.Properties.Resources.search;
@@ -393,40 +484,12 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Image = global::CpParcial2Derh.Properties.Resources.cancel;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(594, 69);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.btnCancelar.Size = new System.Drawing.Size(111, 40);
-            this.btnCancelar.TabIndex = 11;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Image = global::CpParcial2Derh.Properties.Resources.save;
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(483, 69);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.btnGuardar.Size = new System.Drawing.Size(105, 40);
-            this.btnGuardar.TabIndex = 10;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
             // FrmPrincipalSeries
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(819, 448);
+            this.ClientSize = new System.Drawing.Size(819, 450);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.gbxListaSerie);
             this.Controls.Add(this.txtParametro);
@@ -458,6 +521,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.erpDirector)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpEpisodio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpFechaEstreno)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpUrlPortada)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpIdiomaOriginal)).EndInit();
             this.gbxDatosSerie.ResumeLayout(false);
             this.gbxDatosSerie.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEpisodio)).EndInit();
@@ -502,8 +567,14 @@
         private System.Windows.Forms.ErrorProvider erpDirector;
         private System.Windows.Forms.ErrorProvider erpEpisodio;
         private System.Windows.Forms.ErrorProvider erpFechaEstreno;
+        private System.Windows.Forms.ErrorProvider erpUrlPortada;
+        private System.Windows.Forms.ErrorProvider erpIdiomaOriginal;
         private System.Windows.Forms.DateTimePicker dtpFechaEstreno;
         private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.TextBox txtUrlPortada;
+        private System.Windows.Forms.Label lblUrlPortada;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbxIdiomaOriginal;
     }
 }
 

@@ -23,6 +23,8 @@ sinopsis VARCHAR(5000) NOT NULL,
 director VARCHAR(100) NOT NULL,
 episodios INT NOT NULL,
 fechaEstreno DATE,
+urlPortada VARCHAR(500) NOT NULL,
+idiomaOriginal VARCHAR(50) NOT NULL,
 estado SMALLINT NOT NULL DEFAULT 1
 );
 
@@ -30,7 +32,7 @@ ALTER TABLE Serie ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
 ALTER TABLE Serie ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 GO
 
-ALTER PROC paSerieListar @parametro VARCHAR(100)
+CREATE PROC paSerieListar @parametro VARCHAR(100)
 AS
 SELECT * FROM Serie
 WHERE estado <> -1 AND (
@@ -42,5 +44,5 @@ WHERE estado <> -1 AND (
  GO
  EXEC paSerieListar 'Naruto';
 
-INSERT INTO Serie(titulo, sinopsis, director, episodios, fechaEstreno)--, tipoClasificacion
-VALUES ('Naruto','un joven ninja','Akira Toriyama', 120, '2001-01-01');--, 'A');
+INSERT INTO Serie(titulo, sinopsis, director, episodios, fechaEstreno,urlPortada,idiomaOriginal)
+VALUES ('Naruto','un joven ninja','Akira Toriyama', 120, '2001-01-01','https://www.youtube.com/','idionma');

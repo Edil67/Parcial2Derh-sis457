@@ -31,6 +31,9 @@ namespace CpParcial2Derh
             dgvListaSerie.Columns["director"].HeaderText = "DIRECTOR";
             dgvListaSerie.Columns["episodios"].HeaderText = "EPISODIO";
             dgvListaSerie.Columns["fechaEstreno"].HeaderText = "FECHA DE ESTRENO";
+            dgvListaSerie.Columns["urlPortada"].HeaderText = "URL DE PORTADA";
+            dgvListaSerie.Columns["idiomaOriginal"].HeaderText = "IDIOMA ORIGINAL";
+
             dgvListaSerie.Columns["usuarioRegistro"].HeaderText = "USUARIO REGISTRO";
             dgvListaSerie.Columns["fechaRegistro"].HeaderText = "FECHA DE REGISTRO";
 
@@ -83,6 +86,8 @@ namespace CpParcial2Derh
             txtDirector.Text = serie.director;
             nudEpisodio.Value = serie.episodios;
             dtpFechaEstreno.Value = serie.fechaEstreno.HasValue ? serie.fechaEstreno.Value : DateTime.Now;
+            txtUrlPortada.Text = serie.urlPortada;
+            cbxIdiomaOriginal.SelectedItem = serie.idiomaOriginal;
             txtTitulo.Focus();
         }
 
@@ -109,6 +114,8 @@ namespace CpParcial2Derh
             erpDirector.SetError(txtDirector, "");
             erpEpisodio.SetError(nudEpisodio, "");
             erpFechaEstreno.SetError(dtpFechaEstreno, "");
+            erpUrlPortada.SetError(txtUrlPortada, "");
+            erpIdiomaOriginal.SetError(cbxIdiomaOriginal, "");
 
             if (string.IsNullOrEmpty(txtTitulo.Text))
             {
@@ -135,6 +142,16 @@ namespace CpParcial2Derh
                 esValido = false;
                 erpFechaEstreno.SetError(dtpFechaEstreno, "La fecha de estreno no puede ser futura");
             }
+            if (string.IsNullOrEmpty(txtUrlPortada.Text))
+            {
+                esValido = false;
+                erpUrlPortada.SetError(txtUrlPortada, "El campo URL de Portada es obligatorio");
+            }
+            if (cbxIdiomaOriginal.SelectedItem == null)
+            {
+                esValido = false;
+                erpIdiomaOriginal.SetError(cbxIdiomaOriginal, "El campo Idioma Original es obligatorio");
+            }
             return esValido;
         }
 
@@ -148,6 +165,8 @@ namespace CpParcial2Derh
                 serie.director = txtDirector.Text.Trim();
                 serie.episodios = (int)nudEpisodio.Value;
                 serie.fechaEstreno = dtpFechaEstreno.Value;
+                serie.urlPortada= txtUrlPortada.Text.Trim();
+                serie.idiomaOriginal = cbxIdiomaOriginal.Text;
                 serie.usuarioRegistro = "admin";
 
                 if (esNuevo)
@@ -189,5 +208,7 @@ namespace CpParcial2Derh
             txtParametro.Text = string.Empty;
             listar();
         }
+
+
     }
 }
