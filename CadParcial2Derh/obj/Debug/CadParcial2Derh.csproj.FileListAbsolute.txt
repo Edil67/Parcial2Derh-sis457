@@ -1,0 +1,12 @@
+D:\DARWIN\sis457-fundamen_progr-INFOR\Parcial2\Parcial2Derh\CadParcial2Derh\bin\Debug\CadParcial2Derh.dll.config
+D:\DARWIN\sis457-fundamen_progr-INFOR\Parcial2\Parcial2Derh\CadParcial2Derh\bin\Debug\CadParcial2Derh.dll
+D:\DARWIN\sis457-fundamen_progr-INFOR\Parcial2\Parcial2Derh\CadParcial2Derh\bin\Debug\CadParcial2Derh.pdb
+D:\DARWIN\sis457-fundamen_progr-INFOR\Parcial2\Parcial2Derh\CadParcial2Derh\bin\Debug\EntityFramework.dll
+D:\DARWIN\sis457-fundamen_progr-INFOR\Parcial2\Parcial2Derh\CadParcial2Derh\bin\Debug\EntityFramework.SqlServer.dll
+D:\DARWIN\sis457-fundamen_progr-INFOR\Parcial2\Parcial2Derh\CadParcial2Derh\bin\Debug\EntityFramework.xml
+D:\DARWIN\sis457-fundamen_progr-INFOR\Parcial2\Parcial2Derh\CadParcial2Derh\bin\Debug\EntityFramework.SqlServer.xml
+D:\DARWIN\sis457-fundamen_progr-INFOR\Parcial2\Parcial2Derh\CadParcial2Derh\obj\Debug\CadParcial2Derh.csproj.AssemblyReference.cache
+D:\DARWIN\sis457-fundamen_progr-INFOR\Parcial2\Parcial2Derh\CadParcial2Derh\obj\Debug\CadParcial2Derh.csproj.CoreCompileInputs.cache
+D:\DARWIN\sis457-fundamen_progr-INFOR\Parcial2\Parcial2Derh\CadParcial2Derh\obj\Debug\CadParci.964A48EC.Up2Date
+D:\DARWIN\sis457-fundamen_progr-INFOR\Parcial2\Parcial2Derh\CadParcial2Derh\obj\Debug\CadParcial2Derh.dll
+D:\DARWIN\sis457-fundamen_progr-INFOR\Parcial2\Parcial2Derh\CadParcial2Derh\obj\Debug\CadParcial2Derh.pdb
